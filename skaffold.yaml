@@ -5,7 +5,7 @@ build:
   - image: nevalla/skaffold-hello-world
     sync:
       manual:
-        # sync a single file into the `/etc` folder
+        # sync *.ts files without triggering build
         - src: '*.ts'
           dest: '.'
 deploy:
