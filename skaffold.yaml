@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta24
+kind: Config
+build:
+  artifacts:
+  - image: nevalla/skaffold-hello-world
+    sync:
+      manual:
+        # sync a single file into the `/etc` folder
+        - src: '*.ts'
+          dest: '.'
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*
