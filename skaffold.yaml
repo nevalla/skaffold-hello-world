@@ -2,12 +2,14 @@ apiVersion: skaffold/v2beta24
 kind: Config
 build:
   artifacts:
-  - image: nevalla/skaffold-hello-world
+  - image: skaffold-hello-world
     sync:
       manual:
         # sync *.ts files without triggering build
         - src: '*.ts'
           dest: '.'
+  local:
+    push: false
 deploy:
   kubectl:
     manifests:

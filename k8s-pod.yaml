@@ -5,4 +5,5 @@ metadata:
 spec:
   containers:
   - name: getting-started
-    image: nevalla/skaffold-hello-world
+    image: skaffold-hello-world
+    imagePullPolicy: IfNotPresent
